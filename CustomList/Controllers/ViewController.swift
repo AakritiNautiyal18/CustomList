@@ -167,13 +167,17 @@ class ViewController: UIViewController {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
             
         case .authorized: // The user has previously granted access to the camera.
-            showCamera()
+            DispatchQueue.main.async{
+                self.showCamera()
+            }
             break
             
         case .notDetermined: // The user has not yet been asked for camera access.
             AVCaptureDevice.requestAccess(for: .video) { granted in
                 if granted {
-                    self.showCamera()
+                    DispatchQueue.main.async{
+                        self.showCamera()
+                    }
                 } else {
                     self.currentPhotoIndex = -1
                 }
