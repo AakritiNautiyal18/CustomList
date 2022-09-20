@@ -17,13 +17,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx4-Rt-cUd">
-                        <rect key="frame" x="20" y="10" width="42" height="41"/>
+                        <rect key="frame" x="26" y="10" width="42" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-vI-n1I">
                         <rect key="frame" x="26" y="61" width="268" height="268"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="LKc-vI-n1I" secondAttribute="height" multiplier="1:1" id="YNh-Yx-Rfh"/>
                         </constraints>
@@ -49,9 +50,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="LKc-vI-n1I" firstAttribute="top" secondItem="tx4-Rt-cUd" secondAttribute="bottom" constant="10" id="2ae-J1-p2f"/>
-                    <constraint firstItem="tx4-Rt-cUd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="5Rx-80-XMC"/>
                     <constraint firstItem="LKc-vI-n1I" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="EOd-Z6-Xn1"/>
                     <constraint firstItem="iEy-FQ-UwV" firstAttribute="trailing" secondItem="LKc-vI-n1I" secondAttribute="trailing" id="KTp-HU-rz9"/>
+                    <constraint firstItem="LKc-vI-n1I" firstAttribute="leading" secondItem="tx4-Rt-cUd" secondAttribute="leading" id="QTn-z7-NVr"/>
                     <constraint firstItem="iEy-FQ-UwV" firstAttribute="top" secondItem="LKc-vI-n1I" secondAttribute="top" id="UmW-ac-Ebl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="LKc-vI-n1I" secondAttribute="bottom" constant="10" id="XfQ-37-Tgh"/>
                     <constraint firstItem="tx4-Rt-cUd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="h46-I1-nAg"/>

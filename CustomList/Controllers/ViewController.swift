@@ -198,7 +198,7 @@ class ViewController: UIViewController {
     func showCamera(){
         imgPicker.delegate = self
         imgPicker.sourceType = .camera
-        imgPicker.allowsEditing = true
+        imgPicker.allowsEditing = false
         self.present(imgPicker, animated: true, completion: nil)
     }
     
@@ -275,7 +275,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         picker.dismiss(animated: true)
-        guard let img = info[.editedImage] as? UIImage else {
+        guard let img = info[.originalImage] as? UIImage else {
            print("Error while capturing image")
             currentPhotoIndex = -1
             return
