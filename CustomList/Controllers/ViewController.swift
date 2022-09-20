@@ -131,6 +131,8 @@ class ViewController: UIViewController {
         return nil
     }
     
+    //MARK: - handling for keyboard
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -163,6 +165,9 @@ class ViewController: UIViewController {
         itemsTableView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
     
+    //MARK: - Handling for camera permissions
+    
+    //Check camera permissions and request for the same
     func cameraPermission(){
         switch AVCaptureDevice.authorizationStatus(for: .video) {
             
@@ -195,6 +200,7 @@ class ViewController: UIViewController {
         
     }
     
+    //Display camera
     func showCamera(){
         imgPicker.delegate = self
         imgPicker.sourceType = .camera
@@ -202,6 +208,7 @@ class ViewController: UIViewController {
         self.present(imgPicker, animated: true, completion: nil)
     }
     
+    //Alert for asking user to provide camera access
     func presentCameraSettings() {
         let alertController = UIAlertController(title: "Alert",
                                       message: "Camera access is denied",
